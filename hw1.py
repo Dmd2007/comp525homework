@@ -28,7 +28,7 @@ print(" ")
 oddnumbers = int(input("Insert a number to calculate the sum: "))
 total = sum(range(1, oddnumbers+1, 2))
 
-print("The sum of the odd numbers in your range is: ", sum)
+print("The sum of the odd numbers in your range is: ", total)
 
 print(" ")
 
