@@ -79,6 +79,29 @@ def opposite_of_sum(numbers_list):
 
     return opposite_sum
 
+    def opposite_keys(nums_dict):
+    """
+    Maps out the key values in a dictionary (num_dict) and finds the opposite of the
+    numbers the user entered in the corresponding dictionary.
+    num_list: list of numbers
+    Returns: the average of the numbers in num_list. 
+    If num_list is empty, return None
+
+    >>> opposite_keys({1:2, 2:4, 3:6})
+    {-1:2, -2:4, -3:6}
+    >>> opposite_keys({10:20, 20:40, 30:60})
+    {-10:20, -20:40, -30:60}
+    >>> opposite_keys({100:200, 200:400, 300:600})
+    {-100:200, -200:400, -300:600}
+    """
+    user_num = { }
+
+    for nums in nums_dict:
+        user_num[nums] = nums_dict[nums] * -1
+
+    return 
+    user_num
+
 
 
 
