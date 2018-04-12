@@ -26,6 +26,32 @@ def double_numbers(number_list):
 
     return double_number
 
+def leave_lowercase_words(lowerwords_list):
+    """
+    Filters out words out of a list of strings that have uppercase
+    letters.
+    word_list: list of strings
+    Returns: (strings) list of lowercase words with any words 
+    with uppercase removed.  
+
+    >>> leave_lowercase_words(['Hello','how','World','are','yEs','you'])
+    ['how', 'are', 'you']
+
+    >>> leave_lowercase_words(['Blue','blue','is','CooL','cooL','cool'])
+    ['blue', 'is', 'cool']
+
+    >>> leave_lowercase_words(['I','i ',' will','not','nO','NOT'])
+    ['i ', ' will', 'not']
+    """
+    newwords = [ ]
+
+    for lowerwords in lowerwords_list:
+
+        if lowerwords.islower( ):
+
+            newwords.append(lowerwords)
+
+    return newwords
 
 
 
