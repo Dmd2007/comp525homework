@@ -53,6 +53,31 @@ def leave_lowercase_words(lowerwords_list):
 
     return newwords
 
+def opposite_of_sum(numbers_list):
+    """
+    Sums up the numbers in numbers_list and finds the oppisite of the sum
+    numbers_list: list of numbers
+    Returns: the oppisite of the sum of the numbers in the numbers_list
+
+    >>> opposite_of_sum([4,6,8,10,12,14])
+    -54
+    >>> opposite_of_sum([100,1000,10000,100000])
+    -111100
+    >>> opposite_of_sum([1234123,12341234123,1235123451324,134652341,2345623451,6785673465])
+    -1256731868827
+    """
+    if not numbers_list:
+
+        return None
+
+    users_nums = 0
+
+    for numbers in numbers_list:
+
+        users_nums= users_nums + numbers
+        opposite_sum = users_nums * -1
+
+    return opposite_sum
 
 
 
