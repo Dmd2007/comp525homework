@@ -13,7 +13,7 @@ def count_empty_lines(source):
 
 	file_in = open(source)
 
-	for line in file_in
+	for line in file_in:
 		if line == '\n':
 			number_line = number_line + 1
 	file_in.close( )
@@ -31,7 +31,7 @@ def count_at_start(word, source):
 
 	file_in = open(source, 'r')
 
-	for line in file_in
+	for line in file_in:
 		list_words = line.split( )
 		if list_words:
 			if word == list_words[0]:
@@ -39,6 +39,24 @@ def count_at_start(word, source):
 	file_in.close( )
 
 	return count
+
+def count_begin_andend(word, source):
+	"""
+	counts lines with words at the begining and end of the line
+	word: str
+	source: str = name of the file
+	"""
+	iterations = 0
+
+	file_in = open(source)
+
+	for line in file_in:
+		word_lists = line.split( )
+		if word_lists != [] and word == word_lists[0:-1]:
+			iterations = iterations + 1
+	file_in.close( )
+
+	return iterations
 
 
 
