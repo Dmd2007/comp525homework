@@ -1,27 +1,44 @@
 """
-lab 7
+Homework 4
 Dylan Durand
-April 4th, 2018
-
+April 25th, 2018
 """
-def all_greetings_greater_3(greeting_histogram):
-""" 
-reduces greeting_histogram by summing up frequencies of greetings
-of greater than 3
-greeting _histogram: dictionary with greeting strings as keys
-and numerical frequencies as values
+def count_empty_lines(source):
+	"""
+	Counts the iterations of empty lines in a txt file source 
+	source: str (string has the name of text file)
+	Returns: int
+	"""
+	number_line = 0 # counts the empty lines in txt file
 
-Returns: (integer) sum of frequencies of greetings greater than 3
+	file_in = open(source)
 
->>>all_greeting_greater_3 ({'hi': 5, 'bye': 10,'hola':23,'good morning':0})
->>>all_greeting_greater_3(d)
->>>d
-"""
-	total = 0
-	for k in greeting_histogram:
-		if len(k) > 3:
-			total = total + greeting_histogram[k]
-	return total
+	for line in file_in
+		if line == '\n':
+			number_line = number_line + 1
+	file_in.close( )
+
+	return number_line
+
+def count_at_start(word, source):
+	"""
+	Counts the interations of lines that have a word in the begining of the line
+	word: str
+	source: str
+	Returns: int
+	"""
+	count = 0
+
+	file_in = open(source, 'r')
+
+	for line in file_in
+		list_words = line.split( )
+		if list_words:
+			if word == list_words[0]:
+				count = count + 1
+	file_in.close( )
+
+	return count
 
 
 if __name__ == '__main__':
