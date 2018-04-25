@@ -41,6 +41,8 @@ def count_at_start(word, source):
 	return count
 
 
+
+
 if __name__ == '__main__':
 
 	import doctest
